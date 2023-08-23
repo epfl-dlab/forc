@@ -1,0 +1,5 @@
+_target_: src.model_strategies.ThresholdingStrategy
+
+threshold: 0.5
+all_wrong_strategy: "biggest"
+multiple_correct_strategy: "cheapest"

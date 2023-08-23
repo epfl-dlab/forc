@@ -1,0 +1,19 @@
+# @package _global_
+
+# Activate the debug config through the CLI (e.g. `python ... +debug=fast`)
+
+defaults:
+  - override /datamodule: binary_metric_pc
+  - override /model/meta_model: from_ckpt
+  - override /trainer: single_gpu
+
+trainer:
+  accumulate_grad_batches: 1
+  max_steps: -1
+
+model:
+  meta_model:
+    _target_: src.models.meta_models.MetaModelForSequenceClassification.load_from_checkpoint
+    checkpoint_path: ???
+
+run_name: ???

@@ -1,0 +1,4 @@
+defaults:
+  - code-davinci-002
+
+model: "text-davinci-003"

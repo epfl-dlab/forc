@@ -1,0 +1,9 @@
+defaults:
+  - meta_model_default
+
+pretrained_model_name_or_path: "distilbert-base-uncased"
+tokenizer_name_or_path: "distilbert-base-uncased"
+num_labels: 1
+
+default_collator_parameters:
+  num_outputs: 1

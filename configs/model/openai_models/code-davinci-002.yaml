@@ -1,0 +1,8 @@
+defaults:
+  - collator/no_collation
+_target_: src.models.openai_models.OpenAIAPI
+model: "code-davinci-002"
+#api_type: "code_completion"
+api_keys: ${local.openai_api_keys}
+n_workers_per_key: ???
+generation_parameters: ???

@@ -1,0 +1,22 @@
+defaults:
+  - binary_metric
+
+dataset_list_path: ${data_dir}/processed_data/dataset_list.json
+
+dataset_parameters:
+  train:
+    dataset:
+      load_dataset_params:
+        split: "train"
+  val:
+    dataset:
+      load_dataset_params:
+        split: "val"
+    dataloader:
+      batch_size: 20
+  test:
+    dataset:
+      load_dataset_params:
+        split: "test"
+    dataloader:
+      batch_size: 20

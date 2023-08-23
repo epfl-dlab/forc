@@ -1,0 +1,18 @@
+_target_: src.models.openai_models.AdaptiveOpenAI
+
+strategy: /model/model_strategy/cost_oriented_ilp_strategy
+estimation_model: /model/meta_model/from_ckpt
+generation_parameters:
+  max_tokens: 5
+  best_of: 1
+  temperature: 0
+  top_p: 1
+  frequency_penalty: 0
+  presence_penalty: 0
+  stop: "\n"
+  n: 1
+openai_models:
+  - /openai_models/text-ada-001
+  - /openai_models/text-babbage-001
+  - /openai_models/text-curie-001
+  - /openai_models/text-davinci-002

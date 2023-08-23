@@ -1,0 +1,29 @@
+defaults:
+  - optimizer: adam_w
+  - scheduler: polynomial
+
+_target_: src.models.meta_models.MetaModelForSequenceClassification
+
+from_pretrained: True
+save_pretrained: False
+hparams_overrides: null
+hf_config_overrides: null
+
+
+default_collator_parameters:
+  max_length: 512
+  padding: "longest"
+  truncation: True
+  num_outputs: None
+  input: 'queries'
+
+metrics_parameters:
+  threshold: 0.5
+  task: 'binary'
+  average: 'macro'
+
+inference:
+  hf_inference_params:
+    early_stopping: False
+
+eps: 0.1

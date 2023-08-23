@@ -1,0 +1,7 @@
+defaults:
+  - code-davinci-002
+
+model: "text-davinci-002"
+model_prefix: "davinci"
+token_cost: 0.0200
+average_output_len: 8.41

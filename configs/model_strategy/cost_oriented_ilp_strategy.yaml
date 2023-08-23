@@ -1,0 +1,9 @@
+_target_: src.model_strategies.ILPStrategy
+
+threshold: 0.5
+quality_constraint: null
+cost_constraint: ???
+alpha: 0.5
+minimise_cost: False
+maximise_performance: True
+time_limit: null

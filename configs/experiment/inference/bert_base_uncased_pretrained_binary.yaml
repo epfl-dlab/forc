@@ -1,0 +1,14 @@
+# @package _global_
+
+# Activate the debug config through the CLI (e.g. `python ... +debug=fast`)
+
+defaults:
+  - override /datamodule: binary_metric_pc
+  - override /model/meta_model: meta_model_bert_base
+  - override /trainer: single_gpu
+
+trainer:
+  accumulate_grad_batches: 1
+  max_steps: -1
+
+run_name: ???

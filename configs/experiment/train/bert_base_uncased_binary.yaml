@@ -1,0 +1,11 @@
+# @package _global_
+
+# Activate the debug config through the CLI (e.g. `python ... +debug=fast`)
+
+defaults:
+  - override /datamodule: binary_metric_pc
+  - override /model/meta_model: meta_model_bert_base
+  - override /trainer: cpu
+
+run_name: ???
+test: True

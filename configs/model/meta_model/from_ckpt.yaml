@@ -1,0 +1,2 @@
+_target_: ???
+checkpoint_path: ??? # e.g. "${data_dir}/models/meta_model.ckpt"

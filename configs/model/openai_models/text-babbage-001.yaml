@@ -1,0 +1,7 @@
+defaults:
+  - code-davinci-002
+
+model: "text-babbage-001"
+model_prefix: "babbage"
+token_cost: 0.0005
+average_output_len: 7.18

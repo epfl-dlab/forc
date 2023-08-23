@@ -1,0 +1,13 @@
+defaults:
+  - default
+
+_target_: src.datamodules.BinaryMetricDataModule
+dataset_target_: src.datamodules.BinaryMetricDataset
+data_dir: ${data_dir}/processed_data
+
+batch_size: 8
+num_workers: 5
+
+debug: False
+debug_k: 5
+name: "binary_metric"

@@ -1,0 +1,7 @@
+defaults:
+  - code-davinci-002
+
+model: "text-curie-001"
+model_prefix: "curie"
+token_cost: 0.0020
+average_output_len: 7.01

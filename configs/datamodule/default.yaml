@@ -1,0 +1,65 @@
+data_dir: null
+
+debug: False
+debug_k: 12
+dataset_list_path: None
+
+seed: ${seed}
+
+_target_: ???
+# either dataset_target_ should be specified or
+# dataset_parameters.*.dataset._target_ should be overloaded
+dataset_target_: null
+# batch_size needs to be specified
+batch_size: ???
+# num_workers needs to be specified
+num_workers: ???
+name: ???
+
+dataset_parameters:
+  test:
+    dataset:
+      _target_: ${datamodule.dataset_target_}
+      name: ${datamodule.name}
+      seed: ${datamodule.seed}
+      debug: ${datamodule.debug}
+      debug_k: ${datamodule.debug_k}
+      dataset_list_path: ${datamodule.dataset_list_path}
+      load_dataset_params:
+        split: "test"
+        data_dir: ${datamodule.data_dir}
+
+    dataloader:
+      batch_size: ${datamodule.batch_size}
+      num_workers: ${datamodule.num_workers}
+  train:
+    dataset:
+      _target_: ${datamodule.dataset_target_}
+      name: ${datamodule.name}
+      seed: ${datamodule.seed}
+      debug: ${datamodule.debug}
+      debug_k: ${datamodule.debug_k}
+      dataset_list_path: ${datamodule.dataset_list_path}
+      load_dataset_params:
+        split: "train"
+        data_dir: ${datamodule.data_dir}
+
+    dataloader:
+      batch_size: ${datamodule.batch_size}
+      num_workers: ${datamodule.num_workers}
+
+  val:
+    dataset:
+      _target_: ${datamodule.dataset_target_}
+      name: ${datamodule.name}
+      seed: ${datamodule.seed}
+      debug: ${datamodule.debug}
+      debug_k: ${datamodule.debug_k}
+      dataset_list_path: ${datamodule.dataset_list_path}
+      load_dataset_params:
+        split: "val"
+        data_dir: ${datamodule.data_dir}
+
+    dataloader:
+      batch_size: ${datamodule.batch_size}
+      num_workers: ${datamodule.num_workers}

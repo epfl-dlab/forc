@@ -1,0 +1,7 @@
+defaults:
+  - code-davinci-002
+
+model: "text-ada-001"
+model_prefix: "ada"
+token_cost: 0.0004
+average_output_len: 6.85

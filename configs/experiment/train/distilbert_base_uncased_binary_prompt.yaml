@@ -1,0 +1,23 @@
+# @package _global_
+
+# Activate the debug config through the CLI (e.g. `python ... +debug=fast`)
+
+defaults:
+  - override /datamodule: binary_metric_pc
+  - override /model/meta_model: meta_model_distilbert_base
+  - override /trainer: single_gpu
+
+model:
+  meta_model:
+    default_collator_parameters:
+      input: 'prompts'
+    tokenizer_kwargs:
+      truncation_side: 'left'
+
+trainer:
+  accumulate_grad_batches: 1
+  max_epochs: 10
+  max_steps: 20000
+
+run_name: "distilbert_train_prompt"
+test: True
