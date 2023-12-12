@@ -2,13 +2,11 @@
 This repository contains the cost-effective framework for language model choice, described in [Fly-Swat or Cannon? Cost-Effective Language Model Choice via Meta-Modeling](https://arxiv.org/pdf/2308.06077.pdf).
 
 ```
-@misc{šakota2023flyswat,
+@inproceedings{šakota2024flyswat,
       title={Fly-Swat or Cannon? Cost-Effective Language Model Choice via Meta-Modeling}, 
       author={Marija Šakota and Maxime Peyrard and Robert West},
-      year={2023},
-      eprint={2308.06077},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      booktitle={Proceedings of The International ACM Conference on Web Search and Data Mining (WSDM)}
+      year={2024}
 }
 ```
 Please consider citing our work, if you found the provided resources useful.
